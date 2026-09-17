@@ -1,0 +1,99 @@
+name: Package visual evidence
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out workflow controls
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          path: control
+
+      - name: Check out immutable visual source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 23308322684fc24ba237065d06a279d8f472effe
+          path: source
+
+      - name: Verify and package exact artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import shutil
+          import struct
+          from pathlib import Path
+
+          candidate = "247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc"
+          source_commit = "23308322684fc24ba237065d06a279d8f472effe"
+          artifact_name = "015a-247207e-visual-review"
+          manifest_path = Path("control/.github/visual-artifacts/015a-247207e-manifest.json")
+          source_dir = Path("source/015a") / candidate
+          output_dir = Path("artifact")
+
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          expected_metadata = {
+              "project": "ZMCENTR",
+              "phase": "015A",
+              "application_candidate_sha": candidate,
+              "public_archive_image_commit_sha": source_commit,
+              "artifact_name": artifact_name,
+              "synthetic_only": True,
+              "real_business_data": False,
+          }
+          for key, expected in expected_metadata.items():
+              if manifest.get(key) != expected:
+                  raise SystemExit(f"manifest {key} mismatch")
+
+          images = manifest.get("images")
+          if not isinstance(images, list) or len(images) != 11:
+              raise SystemExit("manifest must describe exactly 11 images")
+          expected_names = [item.get("filename") for item in images]
+          if len(set(expected_names)) != 11 or any(Path(name).name != name for name in expected_names):
+              raise SystemExit("manifest filenames must be unique basenames")
+          actual_names = sorted(path.name for path in source_dir.glob("*.png"))
+          if sorted(expected_names) != actual_names:
+              raise SystemExit("immutable source PNG set differs from manifest")
+
+          output_dir.mkdir()
+          for item in images:
+              source = source_dir / item["filename"]
+              data = source.read_bytes()
+              if data[:8] != b"\x89PNG\r\n\x1a\n" or data[12:16] != b"IHDR":
+                  raise SystemExit(f"invalid PNG signature/IHDR: {source.name}")
+              width, height = struct.unpack(">II", data[16:24])
+              if (width, height) != (item["width"], item["height"]):
+                  raise SystemExit(f"dimension mismatch: {source.name}")
+              if hashlib.sha256(data).hexdigest() != item["sha256"]:
+                  raise SystemExit(f"SHA-256 mismatch: {source.name}")
+              shutil.copyfile(source, output_dir / source.name)
+
+          (output_dir / "manifest.json").write_text(
+              json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          entries = sorted(path.name for path in output_dir.iterdir())
+          if entries != sorted(expected_names + ["manifest.json"]):
+              raise SystemExit("artifact directory does not contain exactly 12 expected files")
+          print("ARTIFACT_PRE_UPLOAD_SHA256=PASS_11_OF_11")
+          print("ARTIFACT_FILE_COUNT=12")
+          print("ARTIFACT_UNEXPECTED_FILES=0")
+          PY
+
+      - name: Upload visual review artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: 015a-247207e-visual-review
+          path: artifact/
+          if-no-files-found: error
+          compression-level: 0
+          include-hidden-files: false
+          retention-days: 90

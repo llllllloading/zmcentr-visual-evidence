@@ -1,0 +1,22 @@
+{
+  "project": "ZMCENTR",
+  "phase": "015A",
+  "application_candidate_sha": "247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc",
+  "public_archive_image_commit_sha": "23308322684fc24ba237065d06a279d8f472effe",
+  "artifact_name": "015a-247207e-visual-review",
+  "synthetic_only": true,
+  "real_business_data": false,
+  "images": [
+    {"filename": "01-desktop-overview.png", "sha256": "c1b3ccd5036d6dfa7a268dcfe246700714b41215b62e03cc2aa6e53b76736dd0", "width": 1440, "height": 2328},
+    {"filename": "02-iphone-overview.png", "sha256": "b14b1cdecd3167d340b5667fac7cd3feda10fb5d7fd626946539eadfc9d8a915", "width": 1170, "height": 12717},
+    {"filename": "03-services.png", "sha256": "bba39b2a3ffb7cd2cbf7cf218cba4c5997c5b1ab101683021feeda5e5c7330a4", "width": 1440, "height": 2226},
+    {"filename": "04-procedure.png", "sha256": "9066fe574c1515a04b497e407ea2ec004fd75a12d3bae1d2061c866469c707d6", "width": 1440, "height": 2043},
+    {"filename": "05-specialist.png", "sha256": "7aec3f0b9c4ffe6c306a5adee148c6dd368655ef807cd680a106c6b5cd59ca47", "width": 1440, "height": 2043},
+    {"filename": "06-branch.png", "sha256": "0b33f5034878500041ccf98326dc8c9a7e8ca1760b7266f600ccda3296c49d2a", "width": 1440, "height": 2045},
+    {"filename": "07-retail.png", "sha256": "d772e8289db3a32b861592e160635d66d07b6eb87ead85f9e7e54471077cd1fe", "width": 1440, "height": 2062},
+    {"filename": "08-chart-tooltip.png", "sha256": "0ae9dec5f3493d421d68e3dc05f23face72b3cf8b81f2bd36a405389948f9f8d", "width": 1440, "height": 2328},
+    {"filename": "09-incomplete-cost.png", "sha256": "8842ac40f7b7cf4629fea2fca9b7fa5efa08ba344c70c726cd9ac8610d540bfb", "width": 1440, "height": 2144},
+    {"filename": "10-confirmed.png", "sha256": "207f03a1e6fa46d42826d39121036b0d1e4d8d80269a7ba53f89cef2a6a62969", "width": 1440, "height": 1860},
+    {"filename": "11-mobile-expanded.png", "sha256": "4e59c56ead0c139b63b8e3788974353f0f285f070ac4b269a3925992b5b30132", "width": 1170, "height": 11787}
+  ]
+}
