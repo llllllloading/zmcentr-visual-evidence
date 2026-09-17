@@ -1,0 +1,121 @@
+{
+  "project": "ZMCENTR",
+  "phase": "015A",
+  "application_candidate_sha": "247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc",
+  "visual_image_commit_sha": "23308322684fc24ba237065d06a279d8f472effe",
+  "synthetic_only": true,
+  "privacy_scan": "PASS",
+  "private_public_identity": "PASS",
+  "screenshots": [
+    {
+      "filename": "01-desktop-overview.png",
+      "route": "/analytics?from=2026-09-01&to=2026-09-15&basis=CHECKOUT&comparison=yes",
+      "viewport": "1440x1000 CSS pixels, DPR 1, full page",
+      "state": "CHECKOUT / PARTIAL / overview",
+      "sha256": "c1b3ccd5036d6dfa7a268dcfe246700714b41215b62e03cc2aa6e53b76736dd0",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/01-desktop-overview.png",
+      "width": 1440,
+      "height": 2328
+    },
+    {
+      "filename": "02-iphone-overview.png",
+      "route": "/analytics?from=2026-09-01&to=2026-09-15&basis=CHECKOUT&comparison=yes",
+      "viewport": "390x664 CSS pixels, DPR 3, full page",
+      "state": "CHECKOUT / PARTIAL / iPhone overview",
+      "sha256": "b14b1cdecd3167d340b5667fac7cd3feda10fb5d7fd626946539eadfc9d8a915",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/02-iphone-overview.png",
+      "width": 1170,
+      "height": 12717
+    },
+    {
+      "filename": "03-services.png",
+      "route": "/analytics/services?from=2026-09-01&to=2026-09-15&basis=CHECKOUT&comparison=yes",
+      "viewport": "1440x1000 CSS pixels, DPR 1, full page",
+      "state": "CHECKOUT / PARTIAL / services",
+      "sha256": "bba39b2a3ffb7cd2cbf7cf218cba4c5997c5b1ab101683021feeda5e5c7330a4",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/03-services.png",
+      "width": 1440,
+      "height": 2226
+    },
+    {
+      "filename": "04-procedure.png",
+      "route": "/analytics/services/a1520000-0000-4000-8000-000000000102?from=2026-09-01&to=2026-09-15&basis=CHECKOUT&comparison=yes",
+      "viewport": "1440x1000 CSS pixels, DPR 1, full page",
+      "state": "CHECKOUT / PARTIAL / procedure detail",
+      "sha256": "9066fe574c1515a04b497e407ea2ec004fd75a12d3bae1d2061c866469c707d6",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/04-procedure.png",
+      "width": 1440,
+      "height": 2043
+    },
+    {
+      "filename": "05-specialist.png",
+      "route": "/analytics/specialists/a1520000-0000-4000-8000-000000000202?from=2026-09-01&to=2026-09-15&basis=CHECKOUT&comparison=yes",
+      "viewport": "1440x1000 CSS pixels, DPR 1, full page",
+      "state": "CHECKOUT / PARTIAL / specialist detail",
+      "sha256": "7aec3f0b9c4ffe6c306a5adee148c6dd368655ef807cd680a106c6b5cd59ca47",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/05-specialist.png",
+      "width": 1440,
+      "height": 2043
+    },
+    {
+      "filename": "06-branch.png",
+      "route": "/analytics/branches/a1520000-0000-4000-8000-000000000011?from=2026-09-01&to=2026-09-15&basis=CHECKOUT&comparison=yes",
+      "viewport": "1440x1000 CSS pixels, DPR 1, full page",
+      "state": "CHECKOUT / PARTIAL / branch detail",
+      "sha256": "0b33f5034878500041ccf98326dc8c9a7e8ca1760b7266f600ccda3296c49d2a",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/06-branch.png",
+      "width": 1440,
+      "height": 2045
+    },
+    {
+      "filename": "07-retail.png",
+      "route": "/analytics/retail?from=2026-09-01&to=2026-09-15&basis=CHECKOUT&comparison=yes",
+      "viewport": "1440x1000 CSS pixels, DPR 1, full page",
+      "state": "CHECKOUT / PARTIAL / retail historical and current units",
+      "sha256": "d772e8289db3a32b861592e160635d66d07b6eb87ead85f9e7e54471077cd1fe",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/07-retail.png",
+      "width": 1440,
+      "height": 2062
+    },
+    {
+      "filename": "08-chart-tooltip.png",
+      "route": "/analytics?from=2026-09-01&to=2026-09-15&basis=CHECKOUT&comparison=yes",
+      "viewport": "1440x1000 CSS pixels, DPR 1, full page",
+      "state": "CHECKOUT / PARTIAL / chart tooltip",
+      "sha256": "0ae9dec5f3493d421d68e3dc05f23face72b3cf8b81f2bd36a405389948f9f8d",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/08-chart-tooltip.png",
+      "width": 1440,
+      "height": 2328
+    },
+    {
+      "filename": "09-incomplete-cost.png",
+      "route": "/analytics/services/a1520000-0000-4000-8000-000000000102?from=2026-09-01&to=2026-09-15&basis=CHECKOUT&comparison=yes",
+      "viewport": "1440x1000 CSS pixels, DPR 1, full page",
+      "state": "CHECKOUT / PARTIAL / incomplete cost disclosure",
+      "sha256": "8842ac40f7b7cf4629fea2fca9b7fa5efa08ba344c70c726cd9ac8610d540bfb",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/09-incomplete-cost.png",
+      "width": 1440,
+      "height": 2144
+    },
+    {
+      "filename": "10-confirmed.png",
+      "route": "/analytics?from=2026-09-01&to=2026-10-01&basis=MONTH_CLOSE&period=MONTH&comparison=yes",
+      "viewport": "1440x1000 CSS pixels, DPR 1, full page",
+      "state": "MONTH_CLOSE / PRELIMINARY / unsupported fields absent",
+      "sha256": "207f03a1e6fa46d42826d39121036b0d1e4d8d80269a7ba53f89cef2a6a62969",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/10-confirmed.png",
+      "width": 1440,
+      "height": 1860
+    },
+    {
+      "filename": "11-mobile-expanded.png",
+      "route": "/analytics/services?from=2026-09-01&to=2026-09-15&basis=CHECKOUT&comparison=yes",
+      "viewport": "390x844 CSS pixels, DPR 3, full page",
+      "state": "CHECKOUT / PARTIAL / mobile service details expanded",
+      "sha256": "4e59c56ead0c139b63b8e3788974353f0f285f070ac4b269a3925992b5b30132",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/11-mobile-expanded.png",
+      "width": 1170,
+      "height": 11787
+    }
+  ]
+}

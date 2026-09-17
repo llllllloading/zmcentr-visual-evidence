@@ -1,0 +1,20 @@
+{
+  "phase": "015a",
+  "application_candidate_sha": "247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc",
+  "visual_image_commit_sha": "23308322684fc24ba237065d06a279d8f472effe",
+  "manifest": "015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/manifest.json",
+  "binding_commit": "the Git commit containing this latest.json",
+  "raw_urls": [
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/01-desktop-overview.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/02-iphone-overview.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/03-services.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/04-procedure.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/05-specialist.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/06-branch.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/07-retail.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/08-chart-tooltip.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/09-incomplete-cost.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/10-confirmed.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/23308322684fc24ba237065d06a279d8f472effe/015a/247207e89b2fc5bffc2bc18c8f84e015dc6b7dcc/11-mobile-expanded.png"
+  ]
+}
