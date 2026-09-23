@@ -2,6 +2,9 @@ name: Package visual evidence
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/package-visual-evidence.yml
 
 permissions:
   contents: read
@@ -92,6 +95,76 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: 015a-247207e-visual-review
+          path: artifact/
+          if-no-files-found: error
+          compression-level: 0
+          include-hidden-files: false
+          retention-days: 90
+
+  package_dikidi_journal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out workflow controls
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          path: control
+
+      - name: Check out immutable DIKIDI journal screenshots
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: f8c4032aac589358b27882729058f9ebec55e3d8
+          path: source
+
+      - name: Verify exact synthetic screenshot set
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PYCODE'
+          import hashlib
+          import json
+          import shutil
+          import struct
+          from pathlib import Path
+
+          candidate = "1a589e5ef2b16b2071d552801e032e8190e14130"
+          image_commit = "f8c4032aac589358b27882729058f9ebec55e3d8"
+          root = Path("source/dikidi-journal") / candidate
+          manifest = json.loads((Path("control/dikidi-journal") / candidate / "manifest.json").read_text())
+          if any((manifest.get(k) != v) for k, v in {
+              "project": "ZMCENTR", "phase": "DIKIDI-JOURNAL",
+              "application_candidate_sha": candidate, "visual_image_commit_sha": image_commit,
+              "synthetic_only": True, "privacy_scan": "PASS", "private_public_identity": "PASS"
+          }.items()):
+              raise SystemExit("manifest metadata mismatch")
+          screenshots = manifest.get("screenshots")
+          names = ["desktop-preview.png", "desktop-owner-open.png", "iphone-owner-open.png", "iphone-staff-resolved.png"]
+          if not isinstance(screenshots, list) or [item.get("filename") for item in screenshots] != names:
+              raise SystemExit("screenshot allow-list mismatch")
+          if sorted(p.name for p in root.glob("*.png")) != sorted(names):
+              raise SystemExit("immutable source PNG set mismatch")
+          dest = Path("artifact")
+          dest.mkdir()
+          for item in screenshots:
+              source = root / item["filename"]
+              data = source.read_bytes()
+              if data[:8] != bytes.fromhex("89504e470d0a1a0a") or data[12:16] != b"IHDR":
+                  raise SystemExit("PNG signature mismatch")
+              if struct.unpack(">II", data[16:24]) != (item["width"], item["height"]):
+                  raise SystemExit("PNG dimension mismatch")
+              if hashlib.sha256(data).hexdigest() != item["sha256"]:
+                  raise SystemExit("PNG SHA-256 mismatch")
+              shutil.copyfile(source, dest / source.name)
+          (dest / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
+          if sorted(p.name for p in dest.iterdir()) != sorted(names + ["manifest.json"]):
+              raise SystemExit("artifact entries mismatch")
+          print("DIKIDI_JOURNAL_ARTIFACT_SHA256=PASS_4_OF_4")
+          print("DIKIDI_JOURNAL_ARTIFACT_FILE_COUNT=5")
+          PYCODE
+
+      - name: Upload DIKIDI journal visual review artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dikidi-journal-1a589e5-visual-review
           path: artifact/
           if-no-files-found: error
           compression-level: 0
