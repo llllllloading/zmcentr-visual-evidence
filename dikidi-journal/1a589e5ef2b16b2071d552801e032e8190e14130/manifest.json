@@ -1,0 +1,51 @@
+{
+  "project": "ZMCENTR",
+  "phase": "DIKIDI-JOURNAL",
+  "application_candidate_sha": "1a589e5ef2b16b2071d552801e032e8190e14130",
+  "visual_image_commit_sha": "f8c4032aac589358b27882729058f9ebec55e3d8",
+  "synthetic_only": true,
+  "privacy_scan": "PASS",
+  "private_public_identity": "PASS",
+  "screenshots": [
+    {
+      "filename": "desktop-preview.png",
+      "route": "/dikidi",
+      "viewport": "1440x1000 CSS pixels, DPR 1, full page",
+      "state": "Synthetic XLS preview with owner-confirmed staff/branch",
+      "sha256": "e9c97b36f6584656573f8c814d39aa3d385a4f76bd5bc95dfd2a83807fe16dde",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/f8c4032aac589358b27882729058f9ebec55e3d8/dikidi-journal/1a589e5ef2b16b2071d552801e032e8190e14130/desktop-preview.png",
+      "width": 1440,
+      "height": 1141
+    },
+    {
+      "filename": "desktop-owner-open.png",
+      "route": "/notifications",
+      "viewport": "1440x1000 CSS pixels, DPR 1, full page",
+      "state": "Owner open notification",
+      "sha256": "2fabead3a13c772c4f3ec2dbc57286e2c694858d21733480e3cbd072fd7e1be9",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/f8c4032aac589358b27882729058f9ebec55e3d8/dikidi-journal/1a589e5ef2b16b2071d552801e032e8190e14130/desktop-owner-open.png",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "filename": "iphone-owner-open.png",
+      "route": "/notifications",
+      "viewport": "390x844 CSS pixels, DPR 3, full page",
+      "state": "Mobile owner open notification",
+      "sha256": "c8bf081a48a5bdd1c4f70fcd194ec6ae527239cff461c24874b646b560df135f",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/f8c4032aac589358b27882729058f9ebec55e3d8/dikidi-journal/1a589e5ef2b16b2071d552801e032e8190e14130/iphone-owner-open.png",
+      "width": 1170,
+      "height": 1992
+    },
+    {
+      "filename": "iphone-staff-resolved.png",
+      "route": "/notifications",
+      "viewport": "390x844 CSS pixels, DPR 3, full page",
+      "state": "Mobile staff resolved notification",
+      "sha256": "d6e4462b623f712d8749072605c1bd6503f70a2a12a7b2b20364f446e57bc390",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/f8c4032aac589358b27882729058f9ebec55e3d8/dikidi-journal/1a589e5ef2b16b2071d552801e032e8190e14130/iphone-staff-resolved.png",
+      "width": 1170,
+      "height": 2532
+    }
+  ]
+}

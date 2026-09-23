@@ -1,0 +1,13 @@
+{
+  "phase": "dikidi-journal",
+  "application_candidate_sha": "1a589e5ef2b16b2071d552801e032e8190e14130",
+  "visual_image_commit_sha": "f8c4032aac589358b27882729058f9ebec55e3d8",
+  "manifest": "dikidi-journal/1a589e5ef2b16b2071d552801e032e8190e14130/manifest.json",
+  "binding_commit": "the Git commit containing this latest.json",
+  "raw_urls": [
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/f8c4032aac589358b27882729058f9ebec55e3d8/dikidi-journal/1a589e5ef2b16b2071d552801e032e8190e14130/desktop-preview.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/f8c4032aac589358b27882729058f9ebec55e3d8/dikidi-journal/1a589e5ef2b16b2071d552801e032e8190e14130/desktop-owner-open.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/f8c4032aac589358b27882729058f9ebec55e3d8/dikidi-journal/1a589e5ef2b16b2071d552801e032e8190e14130/iphone-owner-open.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/f8c4032aac589358b27882729058f9ebec55e3d8/dikidi-journal/1a589e5ef2b16b2071d552801e032e8190e14130/iphone-staff-resolved.png"
+  ]
+}
