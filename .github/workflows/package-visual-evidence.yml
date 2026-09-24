@@ -170,3 +170,77 @@ jobs:
           compression-level: 0
           include-hidden-files: false
           retention-days: 90
+
+  package_dikidi_day_scope:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out binding manifest
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          path: control
+
+      - name: Check out immutable screenshot bytes
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 87a80268f769ca97288a7807b8861af5a00ee51d
+          path: source
+
+      - name: Verify anonymous public URLs and package exact images
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PYCODE'
+          import hashlib
+          import json
+          import shutil
+          import struct
+          import subprocess
+          from pathlib import Path
+
+          candidate="97290aefb0c45e47e912ae7fb7e5158bcca390f9"
+          image_commit="87a80268f769ca97288a7807b8861af5a00ee51d"
+          root=Path("source/dikidi-journal")/candidate
+          manifest=json.loads((Path("control/dikidi-journal")/candidate/"manifest.json").read_text())
+          for key,value in {"project":"ZMCENTR","phase":"DIKIDI-JOURNAL-DAY-SCOPE",
+              "application_candidate_sha":candidate,"visual_image_commit_sha":image_commit,
+              "synthetic_only":True,"privacy_scan":"PASS","private_public_identity":"PASS"}.items():
+              if manifest.get(key)!=value: raise SystemExit("manifest metadata mismatch: "+key)
+          items=manifest.get("screenshots")
+          names=["desktop-two-day-preview.png","iphone-day-assignments.png"]
+          if not isinstance(items,list) or [i.get("filename") for i in items]!=names:
+              raise SystemExit("allow-list mismatch")
+          if sorted(p.name for p in root.glob("*.png"))!=sorted(names):
+              raise SystemExit("immutable PNG set mismatch")
+          out=Path("artifact-day")
+          out.mkdir()
+          for i in items:
+              b=(root/i["filename"]).read_bytes()
+              if b[:8]!=bytes.fromhex("89504e470d0a1a0a") or b[12:16]!=b"IHDR":
+                  raise SystemExit("bad PNG signature")
+              if struct.unpack(">II",b[16:24])!=(i["width"],i["height"]):
+                  raise SystemExit("wrong PNG dimensions")
+              if hashlib.sha256(b).hexdigest()!=i["sha256"]:
+                  raise SystemExit("wrong PNG SHA")
+              url="https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/"+image_commit+"/dikidi-journal/"+candidate+"/"+i["filename"]
+              if i["raw_url"]!=url: raise SystemExit("raw URL mismatch")
+              result=subprocess.run(["curl","-fLsS","--max-time","30","-w","%{http_code} %{content_type}",
+                  "-o",str(out/i["filename"]),url],capture_output=True,text=True,check=True)
+              if result.stdout.strip()!="200 image/png":
+                  raise SystemExit("anonymous raw URL HTTP/MIME mismatch: "+result.stdout)
+              if (out/i["filename"]).read_bytes()!=b:
+                  raise SystemExit("anonymous raw URL bytes mismatch")
+          (out/"manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
+          if sorted(p.name for p in out.iterdir())!=sorted(names+["manifest.json"]):
+              raise SystemExit("artifact entries mismatch")
+          print("ANONYMOUS_RAW_PNG_HTTP_200_SHA=PASS_2_OF_2")
+          print("DAY_SCOPE_ARTIFACT_FILE_COUNT=3")
+          PYCODE
+
+      - name: Upload day-scoped journal visual artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dikidi-journal-97290ae-day-scope-visual-review
+          path: artifact-day/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 90
