@@ -1,0 +1,41 @@
+{
+  "project": "ZMCENTR",
+  "phase": "DIKIDI-JOURNAL-NAME-MATCHING",
+  "application_candidate_sha": "1502d43f6de1b223ba16bf876b143d71dad86a28",
+  "visual_image_commit_sha": "2b5af325d2984307d6c82e1b75a7b0ab2266dfbd",
+  "synthetic_only": true,
+  "privacy_scan": "PASS",
+  "private_public_identity": "PASS",
+  "screenshots": [
+    {
+      "filename": "desktop-auto-day-preview.png",
+      "route": "/dikidi",
+      "viewport": "1440x1000 DPR 1 full page",
+      "state": "Two synthetic staff automatically matched by each day",
+      "sha256": "a9e508a8669b979ca6c82809335203e1967fc202b96027f12a6c089b50d61b18",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/2b5af325d2984307d6c82e1b75a7b0ab2266dfbd/dikidi-journal-name-matching/1502d43f6de1b223ba16bf876b143d71dad86a28/desktop-auto-day-preview.png",
+      "width": 1440,
+      "height": 1138
+    },
+    {
+      "filename": "iphone-auto-day-preview.png",
+      "route": "/dikidi",
+      "viewport": "390x844 DPR 3 full page",
+      "state": "Mobile automatic daily assignment",
+      "sha256": "4ef5c323ed1eea5a8e5db75c8afa52227bfc68ce3011b6cd2fc007bd6c554c03",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/2b5af325d2984307d6c82e1b75a7b0ab2266dfbd/dikidi-journal-name-matching/1502d43f6de1b223ba16bf876b143d71dad86a28/iphone-auto-day-preview.png",
+      "width": 1170,
+      "height": 4206
+    },
+    {
+      "filename": "desktop-unregistered-heading.png",
+      "route": "/dikidi",
+      "viewport": "1440x1000 DPR 1 full page",
+      "state": "Unknown structured staff name blocks upload",
+      "sha256": "202d35604f1bf9a3875519840f2fcd8530f542e24338670bd5e6d025312db090",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/2b5af325d2984307d6c82e1b75a7b0ab2266dfbd/dikidi-journal-name-matching/1502d43f6de1b223ba16bf876b143d71dad86a28/desktop-unregistered-heading.png",
+      "width": 1440,
+      "height": 1038
+    }
+  ]
+}

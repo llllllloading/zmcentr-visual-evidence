@@ -1,0 +1,12 @@
+{
+  "phase": "dikidi-journal-name-matching",
+  "application_candidate_sha": "1502d43f6de1b223ba16bf876b143d71dad86a28",
+  "visual_image_commit_sha": "2b5af325d2984307d6c82e1b75a7b0ab2266dfbd",
+  "manifest": "dikidi-journal-name-matching/1502d43f6de1b223ba16bf876b143d71dad86a28/manifest.json",
+  "binding_commit": "the Git commit containing this latest.json",
+  "raw_urls": [
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/2b5af325d2984307d6c82e1b75a7b0ab2266dfbd/dikidi-journal-name-matching/1502d43f6de1b223ba16bf876b143d71dad86a28/desktop-auto-day-preview.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/2b5af325d2984307d6c82e1b75a7b0ab2266dfbd/dikidi-journal-name-matching/1502d43f6de1b223ba16bf876b143d71dad86a28/iphone-auto-day-preview.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/2b5af325d2984307d6c82e1b75a7b0ab2266dfbd/dikidi-journal-name-matching/1502d43f6de1b223ba16bf876b143d71dad86a28/desktop-unregistered-heading.png"
+  ]
+}
