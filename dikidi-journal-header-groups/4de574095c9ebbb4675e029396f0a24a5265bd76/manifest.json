@@ -1,0 +1,31 @@
+{
+  "project": "ZMCENTR",
+  "phase": "DIKIDI-JOURNAL-HEADER-GROUPS",
+  "application_candidate_sha": "4de574095c9ebbb4675e029396f0a24a5265bd76",
+  "visual_image_commit_sha": "d9ba8866146aaf23a15d4ecd38fc8dca95845791",
+  "synthetic_only": true,
+  "privacy_scan": "PASS",
+  "private_public_identity": "PASS",
+  "screenshots": [
+    {
+      "filename": "desktop-header-group-preview.png",
+      "route": "/dikidi",
+      "viewport": "1440x1000 DPR 1 full page",
+      "state": "Synthetic repeated heading mapped once across two days",
+      "sha256": "87aa8afa3c4b314cd4c7b437f1968066b55e2dcd5eeb2431c78b1b81f0dbad0e",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/d9ba8866146aaf23a15d4ecd38fc8dca95845791/dikidi-journal-header-groups/4de574095c9ebbb4675e029396f0a24a5265bd76/desktop-header-group-preview.png",
+      "width": 1440,
+      "height": 1219
+    },
+    {
+      "filename": "iphone-header-group-preview.png",
+      "route": "/dikidi",
+      "viewport": "390x844 DPR 3 full page",
+      "state": "Synthetic repeated heading mapped once across two days",
+      "sha256": "ce3a00b64077e862c84f69d97b24d5298014ab3677ec8d7b5d96a54fdf235eb1",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/d9ba8866146aaf23a15d4ecd38fc8dca95845791/dikidi-journal-header-groups/4de574095c9ebbb4675e029396f0a24a5265bd76/iphone-header-group-preview.png",
+      "width": 1170,
+      "height": 4221
+    }
+  ]
+}
