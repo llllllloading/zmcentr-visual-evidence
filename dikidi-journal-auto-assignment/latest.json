@@ -1,0 +1,11 @@
+{
+  "phase": "dikidi-journal-auto-assignment",
+  "application_candidate_sha": "890040fde6fec481888b30d04fae4902928e816b",
+  "visual_image_commit_sha": "81f72f59be870be74b36ea13c03ac27f596adcf0",
+  "manifest": "dikidi-journal-auto-assignment/890040fde6fec481888b30d04fae4902928e816b/manifest.json",
+  "binding_commit": "the Git commit containing this latest.json",
+  "raw_urls": [
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/81f72f59be870be74b36ea13c03ac27f596adcf0/dikidi-journal-auto-assignment/890040fde6fec481888b30d04fae4902928e816b/desktop-auto-day-preview.png",
+    "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/81f72f59be870be74b36ea13c03ac27f596adcf0/dikidi-journal-auto-assignment/890040fde6fec481888b30d04fae4902928e816b/iphone-auto-day-preview.png"
+  ]
+}
