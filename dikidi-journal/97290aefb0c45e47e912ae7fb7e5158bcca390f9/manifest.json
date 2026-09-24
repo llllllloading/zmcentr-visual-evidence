@@ -1,0 +1,31 @@
+{
+  "project": "ZMCENTR",
+  "phase": "DIKIDI-JOURNAL-DAY-SCOPE",
+  "application_candidate_sha": "97290aefb0c45e47e912ae7fb7e5158bcca390f9",
+  "visual_image_commit_sha": "87a80268f769ca97288a7807b8861af5a00ee51d",
+  "synthetic_only": true,
+  "privacy_scan": "PASS",
+  "private_public_identity": "PASS",
+  "source_workflow_run_id": 35958836998,
+  "source_artifact_id": 10791213971,
+  "screenshots": [
+    {
+      "filename": "desktop-two-day-preview.png",
+      "sha256": "9818c5bafd77c580d8203b2552779e8330a1629943042db9e226b7f66e131d69",
+      "width": 1440,
+      "height": 1372,
+      "viewport": "1440x1000, DPR 1, full page",
+      "state": "Two daily scopes: Ekaterinburg/Anna and Verkhnyaya Pyshma/Elena",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/87a80268f769ca97288a7807b8861af5a00ee51d/dikidi-journal/97290aefb0c45e47e912ae7fb7e5158bcca390f9/desktop-two-day-preview.png"
+    },
+    {
+      "filename": "iphone-day-assignments.png",
+      "sha256": "d7b506b410651cf0d6ab148b24a85d99f97acc20874e4e60619c02d22e3def98",
+      "width": 1170,
+      "height": 2460,
+      "viewport": "390x844, DPR 3, crop of full-page screenshot y=1940..4400 physical pixels",
+      "state": "Mobile two daily scopes and save button",
+      "raw_url": "https://raw.githubusercontent.com/llllllloading/zmcentr-visual-evidence/87a80268f769ca97288a7807b8861af5a00ee51d/dikidi-journal/97290aefb0c45e47e912ae7fb7e5158bcca390f9/iphone-day-assignments.png"
+    }
+  ]
+}
